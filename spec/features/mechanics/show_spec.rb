@@ -1,14 +1,14 @@
 require 'rails_helper'
 RSpec.describe 'it shows the specific show page for a certain mechanic and all details about them' do
   before :each do
-    @amusment_park1 = AmusmentPark.create!(name: "Elitches", price_of_admission: 50)
-    @amusment_park2 = AmusmentPark.create!(name: "Lake Side", price_of_admission: 30)
+    @amusement_park1 = AmusementPark.create!(name: "Elitches", price_of_admission: 50)
+    @amusement_park2 = AmusementPark.create!(name: "Lake Side", price_of_admission: 30)
   
-    @ride1 = Ride.create!(name: "Mind Eraser", thrill_rating: 7, open: true, amusement_parks_id: @amusment_park1.id)
-    @ride2 = Ride.create!(name: "Side Winder", thrill_rating: 4, open: true, amusement_parks_id: @amusment_park1.id)
-    @ride3 = Ride.create!(name: "Tower O Doom", thrill_rating: 10, open: true, amusement_parks_id: @amusment_park1.id)
-    @ride4 = Ride.create!(name: "Shake Rattle and Roll", thrill_rating: 1, open: false, amusement_parks_id: @amusment_park1.id)
-    @ride5 = Ride.create!(name: "Twister 2 ", thrill_rating: 9, open: true, amusement_parks_id: @amusment_park1.id)
+    @ride1 = Ride.create!(name: "Mind Eraser", thrill_rating: 7, open: true, amusement_park_id: @amusement_park1.id)
+    @ride2 = Ride.create!(name: "Side Winder", thrill_rating: 4, open: true, amusement_park_id: @amusement_park1.id)
+    @ride3 = Ride.create!(name: "Tower O Doom", thrill_rating: 10, open: true, amusement_park_id: @amusement_park1.id)
+    @ride4 = Ride.create!(name: "Shake Rattle and Roll", thrill_rating: 1, open: false, amusement_park_id: @amusement_park1.id)
+    @ride5 = Ride.create!(name: "Twister 2 ", thrill_rating: 9, open: true, amusement_park_id: @amusement_park1.id)
 
     @mechanic1 = Mechanic.create!(name: "Bob", years_of_experience: 7)
     @mechanic2 = Mechanic.create!(name: "Jim", years_of_experience: 1)

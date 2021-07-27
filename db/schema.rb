@@ -42,11 +42,11 @@ ActiveRecord::Schema.define(version: 2021_07_26_175104) do
     t.boolean "open"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "amusement_parks_id"
-    t.index ["amusement_parks_id"], name: "index_rides_on_amusement_parks_id"
+    t.bigint "amusement_park_id"
+    t.index ["amusement_park_id"], name: "index_rides_on_amusement_park_id"
   end
 
   add_foreign_key "maintenances", "mechanics"
   add_foreign_key "maintenances", "rides"
-  add_foreign_key "rides", "amusement_parks", column: "amusement_parks_id"
+  add_foreign_key "rides", "amusement_parks"
 end
